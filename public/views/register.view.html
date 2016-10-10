@@ -1,0 +1,46 @@
+<div layout="row" layout-align="center" style="width:100%">
+  <md-card flex="90" class="md-whiteframe-5dp" style="height:95%">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2 flex="95">登録・確認</h2>
+      </div>
+    </md-toolbar>
+    <md-content layout-gt-md="row" layout-padding style="height:100%">
+      <form ng-controller="loginCtrl"  name="tabletypes" novalidate flex="90">
+        <md-card-content>
+          <section>
+            <div layout="column" ng-cloak>
+              <md-input-container flex="20">
+                <label>商品名</label>
+                <input ng-model="itemName" name="itemName" required>
+              </md-input-container>
+
+              <md-input-container flex="60">
+                <label>個数</label>
+                 <input ng-model="itemNum" name="itemNum" required>
+              </md-input-container>
+              
+              <md-input-container flex="60">
+                <label>製造者</label>
+                 <input ng-model="itemMaker" name="itemMaker" required>
+              </md-input-container>
+            </div>
+ 
+ 
+            <md-card-actions layout="row" layout-align="end center">
+            
+              <md-button class="md-accent md-raised" ng-click="issue()">Apply</md-button>
+              
+            </md-card-actions>
+
+          </section>
+
+        </md-card-content>
+
+      </form>
+    </md-content>
+
+  </md-card>
+
+
+</div>
