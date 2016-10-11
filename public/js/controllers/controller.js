@@ -46,6 +46,13 @@ app.controller('loginCtrl', ['$scope', '$controller', 'socket', function($scope,
 		};
 		socket.send($scope.issueData);
 	};
+	
+	$scope.read = function() {
+		$scope.readData = {
+			"type": "get"
+		};
+		socket.send($scope.readData);
+	};
 
 
 }]);

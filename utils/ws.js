@@ -10,6 +10,7 @@ module.exports.setup = function(sdk, cc){
 module.exports.process_msg = function(ws, data){
 		if(data.type == 'issue'){
 			console.log('issue');
+			console.log(chaincode);
 			if(data.thing && data.madeBy && data.amount && data.createdAt){
 				chaincode.invoke.write([data.thing, data.madeBy, data.amount, data.createdAt], cb_invoked);
 			}
